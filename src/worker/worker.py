@@ -3,6 +3,7 @@ import pandas as pd
 from lxml import etree
 from biosample import BioSample
 from download import get_contents
+from upload import upload
 
 
 MAX_ITEMS_PER_WORKER = 1000
@@ -20,7 +21,7 @@ def process(start_byte, end_byte):
     items = etree.iterparse(f, events=("end", ))
     items = filter(lambda x: x[1].tag in {"BioSample", "Attribute", "Id"}, items)
     df = get_df_from_items(items)
-    return df
+    upload(df)
 
 
 def get_df_from_items(items):
