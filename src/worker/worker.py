@@ -34,6 +34,3 @@ def get_df_from_items(items):
     df = pd.DataFrame(dicts)
     df.rename(columns={'BioSample': 'biosample_id', 'SRA': 'sra_id'}, inplace=True)
     return df
-
-# process(54, 1692820)
-# process(1692820, 3558646)
