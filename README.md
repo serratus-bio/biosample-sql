@@ -1,4 +1,4 @@
-# biosample-upload
+# biosample-sql
 
 ## Overview
 
