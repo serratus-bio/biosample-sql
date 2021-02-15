@@ -6,15 +6,13 @@ from download import get_contents
 from upload import upload
 
 
-MAX_ITEMS_PER_WORKER = 1000
-
-
 def handler(event, context):
     process(event['start_byte'], event['end_byte'])
 
 
 def process(start_byte, end_byte):
-    contents = get_contents(start_byte, end_byte).read()
+    """read [start_byte, end_byte)"""
+    contents = get_contents(start_byte, end_byte - 1).read()
     contents = f'<xml>{contents}</xml>'.encode()
     f = io.BytesIO(contents)
 
@@ -31,8 +29,6 @@ def get_df_from_items(items):
         if element.tag == 'BioSample':
             biosample = BioSample(elements)
             dicts.append(biosample.get_columns(['BioSample', 'SRA', 'lat_lon', 'geo_loc_name']))
-            if len(dicts) == MAX_ITEMS_PER_WORKER:
-                break
             elements = []
         elements.append(element)
     df = pd.DataFrame(dicts)
