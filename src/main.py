@@ -1,33 +1,36 @@
-import itertools
-import gzip
-import pandas as pd
-from lxml import etree
-from biosample import BioSample
+MAX_ITEMS_PER_WORKER = 1000
+xml_file = 'data/head.xml'
 
+def prepare_worker(start_byte):
+    with open(xml_file, 'r') as f:
+        _ = f.seek(start_byte, 0)
+        if start_byte == 0:
+            start_byte += len(next(f)) # skip <?xml ...
+            start_byte += len(next(f)) # skip <BioSampleSet>
 
-def get_df_from_items(items):
-    collect = False
-    elements = []
-    biosamples = []
-    dicts = []
-    for _, element in items:
-        if element.tag == 'BioSample':
-            if not elements:
-                collect = True
-            else:
-                biosample = BioSample(elements)
-                dicts.append(biosample.get_columns(['BioSample', 'SRA', 'lat_lon', 'geo_loc_name']))
-                elements = []
-        if collect:
-            elements.append(element)
-    return pd.DataFrame(dicts)
+        count = 0
+        n_bytes = 0
+        for line in f:
+            n_bytes += len(line)
+            if line.startswith('</BioSample>'):
+                count += 1
+            if count == MAX_ITEMS_PER_WORKER:
+                break
 
+    end_byte = start_byte + n_bytes
+    invoke_worker(start_byte, end_byte)
+    return end_byte
 
-if __name__ == '__main__':
-    handle = gzip.open("../data/biosample_set.xml.gz", "r")
-    items = etree.iterparse(handle, events=("end", "start"))
-    items = filter(lambda x: x[0] == "start", items)
-    items = filter(lambda x: x[1].tag in {"BioSample", "Attribute", "Id"}, items)
-    items = itertools.islice(items, 10000)
-    df = get_df_from_items(items)
-    df.dropna(subset=['lat_lon', 'geo_loc_name'], thresh=1).to_csv('test.tsv', sep='\t', index=False)
+def manage():
+    start_byte = 0
+    while start_byte < 10000000:
+        print(start_byte)
+        start_byte = prepare_worker(start_byte)
+        prepare_worker(start_byte)
+
+def invoke_worker(start_byte, end_byte):
+    pass
+    # from worker import handler
+    # handler({'start_byte': start_byte, 'end_byte': end_byte}, None)
+
+manage()
