@@ -9,10 +9,10 @@ MAX_ITEMS_PER_WORKER = 1000
 
 
 def handler(event, context):
-    pass
+    process(event['start_byte'], event['end_byte'])
 
 
-def get_df(start_byte, end_byte):
+def process(start_byte, end_byte):
     contents = get_contents(start_byte, end_byte).read()
     contents = f'<xml>{contents}</xml>'.encode()
     f = io.BytesIO(contents)
@@ -24,7 +24,6 @@ def get_df(start_byte, end_byte):
 
 
 def get_df_from_items(items):
-    collect = False
     elements = []
     dicts = []
     for _, element in items:
@@ -37,5 +36,5 @@ def get_df_from_items(items):
         elements.append(element)
     return pd.DataFrame(dicts)
 
-# get_df(54, 1692820)
-get_df(1692820, 3558646)
+# process(54, 1692820)
+# process(1692820, 3558646)
