@@ -49,4 +49,4 @@ def prepare_worker(start_byte):
 
 def invoke_worker(start_byte, end_byte):
     event = {'start_byte': start_byte, 'end_byte': end_byte}
-    # invoke_lambda(WORKER_LAMBDA, event)
+    invoke_lambda(WORKER_LAMBDA, event)
