@@ -7,7 +7,7 @@ class BioSample():
         self.attrs = dict()
         self.parse_elements()
         self.extracted_attrs = dict()
-        self.parse_location()
+        # self.parse_location()
 
     def parse_elements(self):
         for element in self.elements:
