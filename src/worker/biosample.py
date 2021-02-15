@@ -11,7 +11,7 @@ class BioSample():
 
     def parse_elements(self):
         for element in self.elements:
-            if element.tag == 'Id':
+            if element.tag == 'Id' and 'db' in element.attrib:
                 self.ids[element.attrib['db']] = normalize_text(element.text)
             elif element.tag == 'Attribute' and 'harmonized_name' in element.attrib:
                 self.attrs[element.attrib['harmonized_name']] = normalize_text(element.text)
