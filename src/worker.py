@@ -1,21 +1,25 @@
+import io
 import pandas as pd
 from lxml import etree
+from biosample import BioSample
+from download import get_contents
 
 
 MAX_ITEMS_PER_WORKER = 1000
-xml_file = 'data/head.xml'
+
 
 def handler(event, context):
-    start_byte = event['start_byte']
-    end_byte = event['end_byte']
-    with open(xml_file, 'rb') as f:
-        f.seek(start_byte, 0)
-        items = etree.iterparse(f, events=("end", "start"))
-        items = filter(lambda x: x[0] == "start", items)
-        items = filter(lambda x: x[1].tag in {"BioSample", "Attribute", "Id"}, items)
-        # items = itertools.islice(items, 10000)
-        df = get_df_from_items(items)
-    # df.dropna(subset=['lat_lon', 'geo_loc_name'], thresh=1).to_csv('test.tsv', sep='\t', index=False)
+    pass
+
+
+def get_df(start_byte, end_byte):
+    contents = get_contents(start_byte, end_byte).read()
+    contents = f'<xml>{contents}</xml>'.encode()
+    f = io.BytesIO(contents)
+
+    items = etree.iterparse(f, events=("end", ))
+    items = filter(lambda x: x[1].tag in {"BioSample", "Attribute", "Id"}, items)
+    df = get_df_from_items(items)
     return df
 
 
@@ -32,3 +36,6 @@ def get_df_from_items(items):
             elements = []
         elements.append(element)
     return pd.DataFrame(dicts)
+
+# get_df(54, 1692820)
+get_df(1692820, 3558646)
