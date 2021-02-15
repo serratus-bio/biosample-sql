@@ -1,38 +1,16 @@
-## Lambda setup
+# biosample-upload
 
-- run `create-layer.sh` on AWS CloudShell
+## Overview
 
-## SQL
+Implements a manager-worker model with AWS Lambda to parse and upload BioSample XML data into a PostgreSQL database.
 
-```sql
-ALTER TABLE biosample ADD PRIMARY KEY (biosample_id);
-```
+## Database
 
-some interesting queries:
+Data is hosted on the Serratus PostgreSQL cluster, which is publicly accessible via any PostgreSQL client (e.g. pgAdmin)
 
-```sql
-select count(*) from biosample
-where lat_lon is not null or geo_loc_name is not null
+- Endpoint: `serratus-aurora-20210215-cluster.cluster-ro-ccz9y6yshbls.us-east-1.rds.amazonaws.com`
+- Database: `summary`
+- Username: `public_reader`
+- Password: `serratus`
 
-select count(distinct geo_loc_name) from biosample
-
-select geo_loc_name, count(*) from biosample
-group by geo_loc_name
-limit 100
-```
-
-## unzip to s3
-
-```sh
-# copy biosample_set.xml.gz
-wget -qO- https://ftp.ncbi.nlm.nih.gov/biosample/biosample_set.xml.gz | aws s3 cp - s3://serratus-public/notebook/210212_geo/victorlin/biosample_parse/biosample_set.xml.gz
-
-# unzip to biosample_set.xml
-aws s3 cp s3://serratus-public/notebook/210212_geo/victorlin/biosample_parse/biosample_set.xml.gz - | zcat | aws s3 cp - s3://serratus-public/notebook/210212_geo/victorlin/biosample_parse/biosample_set.xml
-```
-
-## head
-
-```bsh
-zcat < biosample_set.xml.gz | head -n 100000 > head.xml
-```
+Table: `biosample`
