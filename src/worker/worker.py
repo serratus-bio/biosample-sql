@@ -28,7 +28,7 @@ def get_df_from_items(items):
     for _, element in items:
         if element.tag == 'BioSample':
             biosample = BioSample(elements)
-            dicts.append(biosample.get_columns(['BioSample', 'SRA', 'lat_lon', 'geo_loc_name']))
+            dicts.append(biosample.get_columns(['BioSample', 'SRA', 'lat_lon', 'geo_loc_name', 'collection_date']))
             elements = []
         elements.append(element)
     df = pd.DataFrame(dicts)
