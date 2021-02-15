@@ -1,3 +1,7 @@
+## Lambda setup
+
+- run `create-layer.sh` on AWS CloudShell
+
 ## unzip to s3
 
 ```
