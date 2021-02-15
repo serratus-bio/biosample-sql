@@ -1,0 +1,3 @@
+lxml
+pandas
+sqlalchemy-aurora-data-api
