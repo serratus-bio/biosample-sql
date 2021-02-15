@@ -5,16 +5,21 @@ s3 = boto3.resource('s3')
 s3_object = s3.Object(bucket_name='serratus-public', key='notebook/210212_geo/victorlin/biosample_parse/biosample_set.xml')
 
 WORKER_LAMBDA = 'biosample-upload-worker'
-MAX_ITEMS_PER_WORKER = 1000
-
+MAX_ITEMS_PER_WORKER = 10000
+MINIMUN_REMAINING_TIME_MS = 10000
 
 def handler(event, context):
     start_byte = event['start_byte']
-    end = s3_object.content_length / 5000
+    end = s3_object.content_length
     while start_byte < end:
-        # print(start_byte)
+        if context.get_remaining_time_in_millis() < MINIMUN_REMAINING_TIME_MS:
+            break
         start_byte = prepare_worker(start_byte)
-        print(start_byte / end)
+    if start_byte < end:
+        invoke_new_manager(context, start_byte)
+    else:
+        # final worker
+        invoke_worker(start_byte, end)
 
 
 def get_contents(start_byte, end_byte=None):
@@ -50,3 +55,11 @@ def prepare_worker(start_byte):
 def invoke_worker(start_byte, end_byte):
     event = {'start_byte': start_byte, 'end_byte': end_byte}
     invoke_lambda(WORKER_LAMBDA, event)
+
+
+def invoke_new_manager(context, next_start_byte):
+    # invoke next manager instance
+    next_event = {
+        'start_byte': next_start_byte
+    }
+    invoke_lambda(context.function_name, next_event)
