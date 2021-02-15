@@ -2,14 +2,6 @@
 
 - run `create-layer.sh` on AWS CloudShell
 
-```sh
-aws lambda update-function-configuration \
-    --function-name  biosample-upload-worker \
-    --runtime python3.7
-    --timeout 60 \
-    --memory-size 10240
-```
-
 ## SQL
 
 ```sql
