@@ -1,21 +1,22 @@
+from download import get_contents
+
 MAX_ITEMS_PER_WORKER = 1000
-xml_file = 'data/head.xml'
 
 def prepare_worker(start_byte):
-    with open(xml_file, 'r') as f:
-        _ = f.seek(start_byte, 0)
-        if start_byte == 0:
-            start_byte += len(next(f)) # skip <?xml ...
-            start_byte += len(next(f)) # skip <BioSampleSet>
+    f = get_contents(start_byte)
+    lines = f.iter_lines()
+    if start_byte == 0:
+        start_byte += len(next(lines)) # skip <?xml ...
+        start_byte += len(next(lines)) # skip <BioSampleSet>
 
-        count = 0
-        n_bytes = 0
-        for line in f:
-            n_bytes += len(line)
-            if line.startswith('</BioSample>'):
-                count += 1
-            if count == MAX_ITEMS_PER_WORKER:
-                break
+    count = 0
+    n_bytes = 0
+    for line in lines:
+        n_bytes += len(line)
+        if line.startswith(b'</BioSample>'):
+            count += 1
+        if count == MAX_ITEMS_PER_WORKER:
+            break
 
     end_byte = start_byte + n_bytes
     invoke_worker(start_byte, end_byte)
