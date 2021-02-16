@@ -20,6 +20,21 @@ select count(distinct geo_loc_name) from biosample
 select geo_loc_name, count(*) from biosample
 group by geo_loc_name
 limit 100
+
+
+-- json stuff
+
+select *, jsonb_object_keys(geo_coord) from biosample2
+
+select * from biosample2
+where geo_coord->>'lat_lon' is not null
+
+SELECT
+  DISTINCT field
+FROM (
+  SELECT jsonb_object_keys(geo_coord) AS field
+  FROM biosample2
+) AS subquery
 ```
 
 ## unzip to s3

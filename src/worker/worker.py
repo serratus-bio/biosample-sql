@@ -28,9 +28,10 @@ def get_df_from_items(items):
     for _, element in items:
         if element.tag == 'BioSample':
             biosample = BioSample(elements)
-            dicts.append(biosample.get_columns(['BioSample', 'SRA', 'lat_lon', 'geo_loc_name', 'collection_date']))
+            dicts.append(biosample.get_columns())
             elements = []
         elements.append(element)
     df = pd.DataFrame(dicts)
+    # TODO: move rename to biosample.py
     df.rename(columns={'BioSample': 'biosample_id', 'SRA': 'sra_id'}, inplace=True)
     return df
