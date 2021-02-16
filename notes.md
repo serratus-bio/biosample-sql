@@ -30,11 +30,14 @@ select * from biosample2
 where geo_coord->>'lat_lon' is not null
 
 SELECT
-  DISTINCT field
+  geo_coord_key, count(*)
 FROM (
-  SELECT jsonb_object_keys(geo_coord) AS field
+  SELECT jsonb_object_keys(geo_coord) AS geo_coord_key
   FROM biosample2
 ) AS subquery
+GROUP BY
+  geo_coord_key
+ORDER BY COUNT(*) DESC
 ```
 
 ## unzip to s3
