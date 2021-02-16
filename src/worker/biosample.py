@@ -1,6 +1,6 @@
 from biosample_parse_config import (
     potential_coord_attrs,
-    potential_geo_text_attrs,
+    potential_geo_text_keywords,
     collection_date_attr
 )
 
@@ -41,12 +41,12 @@ class BioSample():
             'geo_text': dict()
         }
         for k, v in self.attrs.items():
-            if k in potential_coord_attrs:
-                d['geo_coord'][k] = v
-            if k in potential_geo_text_attrs:
-                d['geo_text'][k] = v
             if k == collection_date_attr:
                 d['collection_date'] = v
+            elif k in potential_coord_attrs:
+                d['geo_coord'][k] = v
+            elif any(keyword in k for keyword in potential_geo_text_keywords):
+                d['geo_text'][k] = v
         return d
 
     def __repr__(self):

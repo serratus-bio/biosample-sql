@@ -25,7 +25,7 @@ attrib = ["lat_lon", "latitude_and_longitude",
           "latitude_and_longitude_2", "lat_lon_2", "lat_long_details",
           "geographical_location_lat_lon"]
 potential_coord_attrs = set(attrib)
-potential_geo_text_attrs = {"geo_loc_name"}
+potential_geo_text_keywords = {'location', 'geogra', 'geoloc', 'geo_loc'}
 collection_date_attr = "collection_date"
 
 # lat_lon_pattern = '^(-?\d+(\.\d+)?)\s*(\w)*\s*(-?\d+(\.\d+)?)\s*(\w)*$'
