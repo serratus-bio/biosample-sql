@@ -1,4 +1,4 @@
-attrib = ["biosample","lat_lon", "latitude_and_longitude", 
+attrib = ["lat_lon", "latitude_and_longitude",
           "geographic_location_longitude",
           "geographic_location_latitude", "longitude", "latitude",
           "lat_lo_n", "decimallatitude", "decimallongitude", 
