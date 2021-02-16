@@ -17,8 +17,11 @@ class BioSample():
         for element in self.elements:
             if element.tag == 'Id' and 'db' in element.attrib:
                 self.ids[element.attrib['db']] = normalize_text(element.text)
-            elif element.tag == 'Attribute' and 'harmonized_name' in element.attrib:
-                self.attrs[element.attrib['harmonized_name']] = normalize_text(element.text)
+            elif element.tag == 'Attribute':
+                if 'harmonized_name' in element.attrib:
+                    self.attrs[element.attrib['harmonized_name']] = normalize_text(element.text)
+                elif 'attribute_name' in element.attrib:
+                    self.attrs[element.attrib['attribute_name']] = normalize_text(element.text)
 
     def as_dict(self):
         return {**self.ids, **self.attrs}
