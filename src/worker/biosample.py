@@ -49,9 +49,3 @@ class BioSample():
 
     def __repr__(self):
         return f'BioSample({self.ids})'
-
-
-def normalize_text(element_text):
-    if element_text in nan_values:
-        return None
-    return element_text
