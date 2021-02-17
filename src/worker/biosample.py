@@ -41,9 +41,9 @@ class BioSample():
         for k, v in self.attrs.items():
             if k == collection_date_attr:
                 d['collection_date'] = v
-            elif any(keyword in k for keyword in potential_geo_coord_keywords):
+            elif any(keyword in k.lower() for keyword in potential_geo_coord_keywords):
                 d['geo_coord'][k] = v
-            elif any(keyword in k for keyword in potential_geo_text_keywords):
+            elif any(keyword in k.lower() for keyword in potential_geo_text_keywords):
                 d['geo_text'][k] = v
         return d
 
