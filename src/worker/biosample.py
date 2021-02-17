@@ -1,4 +1,5 @@
 from biosample_parse_config import (
+    biosample_attribute_keys,
     potential_geo_coord_keywords,
     potential_geo_text_keywords,
     collection_date_attr
@@ -18,10 +19,10 @@ class BioSample():
             if element.tag == 'Id' and 'db' in element.attrib:
                 self.ids[element.attrib['db']] = normalize_text(element.text)
             elif element.tag == 'Attribute':
-                if 'harmonized_name' in element.attrib:
-                    self.attrs[element.attrib['harmonized_name']] = normalize_text(element.text)
-                elif 'attribute_name' in element.attrib:
-                    self.attrs[element.attrib['attribute_name']] = normalize_text(element.text)
+                for key in biosample_attribute_keys:
+                    if key in element.attrib:
+                        self.attrs[element.attrib[key]] = normalize_text(element.text)
+                        break
 
     def as_dict(self):
         return {**self.ids, **self.attrs}
