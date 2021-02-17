@@ -7,7 +7,7 @@ def get_extracted_cols(raw_attrs):
     }
     if len(raw_attrs['geo_coord']) != 0:
         d['geo_coord_extracted'] = try_get_coords(raw_attrs['geo_coord'])
-    elif len(raw_attrs['geo_text']) != 0:
+    if not d['geo_coord_extracted'] and len(raw_attrs['geo_text']) != 0:
         d['geo_text_extracted'] = try_get_text(raw_attrs['geo_text'])
     return d
 
