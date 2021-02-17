@@ -1,5 +1,5 @@
 from biosample_parse_config import (
-    potential_coord_attrs,
+    potential_geo_coord_keywords,
     potential_geo_text_keywords,
     collection_date_attr
 )
@@ -43,7 +43,7 @@ class BioSample():
         for k, v in self.attrs.items():
             if k == collection_date_attr:
                 d['collection_date'] = v
-            elif k in potential_coord_attrs:
+            elif any(keyword in k for keyword in potential_geo_coord_keywords):
                 d['geo_coord'][k] = v
             elif any(keyword in k for keyword in potential_geo_text_keywords):
                 d['geo_text'][k] = v
