@@ -4,6 +4,7 @@ from biosample_parse_config import (
     potential_geo_text_keywords,
     collection_date_attr
 )
+from biosample_parse_functions import get_extracted_cols
 
 class BioSample():
 
@@ -26,14 +27,16 @@ class BioSample():
 
     def get_columns(self):
         d = self.get_ids()
-        d.update(self.get_attrs())
+        raw_attrs = self.get_raw_attrs()
+        d.update(raw_attrs)
+        d.update(get_extracted_cols(raw_attrs))
         return d
 
     def get_ids(self, id_columns=('BioSample', 'SRA')):
         d = self.ids
         return {x: d[x] for x in id_columns if x in d}
 
-    def get_attrs(self):
+    def get_raw_attrs(self):
         d = {
             'geo_coord': dict(),
             'geo_text': dict()
