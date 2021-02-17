@@ -20,6 +20,7 @@ def process(start_byte, end_byte):
     items = filter(lambda x: x[1].tag in {"BioSample", "Attribute", "Id"}, items)
     df = get_df_from_items(items)
     upload(df)
+    return df
 
 
 def get_df_from_items(items):
