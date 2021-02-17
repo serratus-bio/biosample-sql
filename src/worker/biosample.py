@@ -2,7 +2,8 @@ from biosample_parse_config import (
     biosample_attribute_keys,
     potential_geo_coord_keywords,
     potential_geo_text_keywords,
-    collection_date_attr
+    collection_date_attr,
+    nan_values
 )
 
 class BioSample():
@@ -53,8 +54,6 @@ class BioSample():
     def __repr__(self):
         return f'BioSample({self.ids})'
 
-
-nan_values = {'not determined', 'Missing', 'missing'}
 
 def normalize_text(element_text):
     if element_text in nan_values:
