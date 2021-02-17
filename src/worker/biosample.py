@@ -24,9 +24,6 @@ class BioSample():
                         self.attrs[element.attrib[key]] = element.text
                         break
 
-    def as_dict(self):
-        return {**self.ids, **self.attrs}
-
     def get_columns(self):
         d = self.get_ids()
         d.update(self.get_attrs())
