@@ -20,6 +20,7 @@ def process(start_byte, end_byte):
     items = filter(lambda x: x[1].tag in {"BioSample", "Attribute", "Id"}, items)
     df = get_df_from_items(items)
     upload(df)
+    return df
 
 
 def get_df_from_items(items):
@@ -28,9 +29,8 @@ def get_df_from_items(items):
     for _, element in items:
         if element.tag == 'BioSample':
             biosample = BioSample(elements)
-            dicts.append(biosample.get_columns(['BioSample', 'SRA', 'lat_lon', 'geo_loc_name', 'collection_date']))
+            dicts.append(biosample.get_columns())
             elements = []
         elements.append(element)
     df = pd.DataFrame(dicts)
-    df.rename(columns={'BioSample': 'biosample_id', 'SRA': 'sra_id'}, inplace=True)
     return df
