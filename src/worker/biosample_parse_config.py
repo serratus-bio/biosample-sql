@@ -22,7 +22,6 @@ geo_text_exclusion_keywords = {
     'body',
     'colon',
     'disease',
-    'gi',
     'plate',
     'stake',
     'tissue',
@@ -31,6 +30,7 @@ geo_text_exclusion_keywords = {
     'translocation',
     'tumor',
     'tumour',
+    'ulcer',
     'well',
 }
 
