@@ -5,7 +5,10 @@ from biosample_parse_config import (
     potential_geo_text_keywords,
     collection_date_attr
 )
-from biosample_parse_functions import get_extracted_cols
+from biosample_parse_functions import (
+    get_extracted_cols,
+    clean_text
+)
 
 class BioSample():
 
@@ -45,7 +48,7 @@ class BioSample():
         }
         for k, v in self.attrs.items():
             if k == collection_date_attr:
-                d['collection_date'] = v
+                d['collection_date'] = clean_text(v)
             elif any(keyword in k.lower() for keyword in potential_geo_coord_keywords):
                 d['geo_coord_all'][k] = v
             elif any(keyword in k.lower() for keyword in potential_geo_text_keywords):

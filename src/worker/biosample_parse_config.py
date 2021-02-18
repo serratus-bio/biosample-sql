@@ -7,4 +7,27 @@ potential_geo_coord_keywords = {'latitude', 'longitude', '_lat', '_lon', 'lat_',
 potential_geo_text_keywords = {'location', 'geogra', 'geoloc', 'geo_loc'}
 collection_date_attr = "collection_date"
 
+
+# in order of removal
+null_text_values = [
+    'null',
+    'missing geographic information',
+    'missing',
+    'n/a',
+    'n.a.',
+    'none',
+    'not available',
+    'not applicable',
+    'not collected',
+    'not determined',
+    'not provided',
+    'not stated',
+    'unknown',
+]
+
+# these should be exact match (don't remove substring)
+exact_null_text_values = [
+    'na',
+]
+
 # lat_lon_pattern = '^(-?\d+(\.\d+)?)\s*(\w)*\s*(-?\d+(\.\d+)?)\s*(\w)*$'
