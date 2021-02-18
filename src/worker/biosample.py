@@ -1,4 +1,5 @@
 from biosample_parse_config import (
+    biosample_id_colname_map,
     biosample_attribute_keys,
     potential_geo_coord_keywords,
     potential_geo_text_keywords,
@@ -26,15 +27,16 @@ class BioSample():
                         break
 
     def get_columns(self):
-        d = self.get_ids()
+        d = self.get_id_columns()
         raw_attrs = self.get_raw_attrs()
         d.update(raw_attrs)
         d.update(get_extracted_cols(raw_attrs))
         return d
 
-    def get_ids(self, id_columns=('BioSample', 'SRA')):
-        d = self.ids
-        return {x: d[x] for x in id_columns if x in d}
+    def get_id_columns(self):
+        return {colname: self.ids[id_key]
+                for id_key, colname in biosample_id_colname_map.items()
+                if id_key in self.ids}
 
     def get_raw_attrs(self):
         d = {

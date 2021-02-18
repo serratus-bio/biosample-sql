@@ -33,6 +33,4 @@ def get_df_from_items(items):
             elements = []
         elements.append(element)
     df = pd.DataFrame(dicts)
-    # TODO: move rename to biosample.py
-    df.rename(columns={'BioSample': 'biosample_id', 'SRA': 'sra_id'}, inplace=True)
     return df

@@ -1,3 +1,5 @@
+biosample_id_colname_map = {'BioSample': 'biosample_id', 'SRA': 'sra_id'}
+
 # XML: <Attribute harmonized_name="geo_loc_name"
 biosample_attribute_keys = ['harmonized_name', 'attribute_name']
 
