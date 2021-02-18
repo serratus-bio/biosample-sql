@@ -1,7 +1,7 @@
 import re
 from biosample_parse_config import (
-    potential_geo_coord_keywords,
-    potential_geo_text_keywords,
+    geo_coord_inclusion_keywords,
+    geo_text_inclusion_keywords,
     geo_coord_exclusion_keywords,
     geo_text_exclusion_keywords,
     null_text_values,
@@ -13,7 +13,7 @@ def include_coord_key(attrib_key):
     """Determine whether to include attribute for geospatial coordinate info."""
     if any(keyword in attrib_key.lower() for keyword in geo_coord_exclusion_keywords):
         return False
-    if any(keyword in attrib_key.lower() for keyword in potential_geo_coord_keywords):
+    if any(keyword in attrib_key.lower() for keyword in geo_coord_inclusion_keywords):
         return True
     return False
 
@@ -22,7 +22,7 @@ def include_text_key(attrib_key):
     """Determine whether to include attribute for geospatial text info."""
     if any(keyword in attrib_key.lower() for keyword in geo_text_exclusion_keywords):
         return False
-    if any(keyword in attrib_key.lower() for keyword in potential_geo_text_keywords):
+    if any(keyword in attrib_key.lower() for keyword in geo_text_inclusion_keywords):
         return True
     return False
 

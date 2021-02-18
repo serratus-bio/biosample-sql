@@ -3,9 +3,21 @@ biosample_id_colname_map = {'BioSample': 'biosample_id', 'SRA': 'sra_id'}
 # XML: <Attribute harmonized_name="geo_loc_name"
 biosample_attribute_keys = ['harmonized_name', 'attribute_name']
 
-potential_geo_coord_keywords = {'latitude', 'longitude', '_lat', '_lon', 'lat_', 'lon_'}
-potential_geo_text_keywords = {'location', 'geogra', 'geoloc', 'geo_loc'}
 collection_date_attr = "collection_date"
+geo_coord_inclusion_keywords = {
+    'latitude',
+    'longitude',
+    '_lat',
+    '_lon',
+    'lat_',
+    'lon_',
+}
+geo_text_inclusion_keywords = {
+    'location',
+    'geogra',
+    'geoloc',
+    'geo_loc',
+}
 
 geo_coord_exclusion_keywords = {
     'colon',
