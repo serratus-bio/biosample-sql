@@ -40,16 +40,16 @@ class BioSample():
 
     def get_raw_attrs(self):
         d = {
-            'geo_coord': dict(),
-            'geo_text': dict()
+            'geo_coord_all': dict(),
+            'geo_text_all': dict()
         }
         for k, v in self.attrs.items():
             if k == collection_date_attr:
                 d['collection_date'] = v
             elif any(keyword in k.lower() for keyword in potential_geo_coord_keywords):
-                d['geo_coord'][k] = v
+                d['geo_coord_all'][k] = v
             elif any(keyword in k.lower() for keyword in potential_geo_text_keywords):
-                d['geo_text'][k] = v
+                d['geo_text_all'][k] = v
         return d
 
     def __repr__(self):

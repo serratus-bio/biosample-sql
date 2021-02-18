@@ -5,9 +5,9 @@ def get_extracted_cols(raw_attrs):
         'geo_coord_extracted': None, # TODO: split into x/y
         'geo_text_extracted': None
     }
-    d['geo_coord_extracted'] = try_get_coords(raw_attrs['geo_coord'])
+    d['geo_coord_extracted'] = try_get_coords(raw_attrs['geo_coord_all'])
     if not d['geo_coord_extracted']:
-        d['geo_text_extracted'] = try_get_text(raw_attrs['geo_text'])
+        d['geo_text_extracted'] = try_get_text(raw_attrs['geo_text_all'])
     return d
 
 
