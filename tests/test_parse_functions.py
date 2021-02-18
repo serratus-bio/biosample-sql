@@ -16,34 +16,34 @@ def test_clean_text():
 
 def test_include_coord_key():
     # False
-    assert include_coord_key('location') == False
-    assert include_coord_key('_latino') == False
-    assert include_coord_key('how_long_live_LA') == False
-    assert include_coord_key('Colon_Cleanout_Relative_Day') == False
+    assert False == include_coord_key('location')
+    assert False == include_coord_key('_latino')
+    assert False == include_coord_key('how_long_live_LA')
+    assert False == include_coord_key('Colon_Cleanout_Relative_Day')
     # True
-    assert include_coord_key('lat_lon') == True
-    assert include_coord_key('latitude') == True
-    assert include_coord_key('LATITUDE') == True
-    assert include_coord_key('Geographic location (latitude)') == True
+    assert True == include_coord_key('lat_lon')
+    assert True == include_coord_key('latitude')
+    assert True == include_coord_key('LATITUDE')
+    assert True == include_coord_key('Geographic location (latitude)')
 
 def test_include_text_key():
     # False
-    assert include_text_key('tumor location') == False
-    assert include_text_key('anatomical location') == False
-    assert include_text_key('platelocation') == False
-    assert include_text_key('Plate location') == False
-    assert include_text_key('chromosomal translocation') == False
-    assert include_text_key('BodyLocation') == False
-    assert include_text_key('DiseaseLocation') == False
-    assert include_text_key('transect_location') == False
-    assert include_text_key('Ulcer_location') == False
+    assert False == include_text_key('tumor location')
+    assert False == include_text_key('anatomical location')
+    assert False == include_text_key('platelocation')
+    assert False == include_text_key('Plate location')
+    assert False == include_text_key('chromosomal translocation')
+    assert False == include_text_key('BodyLocation')
+    assert False == include_text_key('DiseaseLocation')
+    assert False == include_text_key('transect_location')
+    assert False == include_text_key('Ulcer_location')
     # True
-    assert include_text_key('geo_loc_name') == True
-    assert include_text_key('location') == True
-    assert include_text_key('geographic location (region and locality)') == True
+    assert True == include_text_key('geo_loc_name')
+    assert True == include_text_key('location')
+    assert True == include_text_key('geographic location (region and locality)')
     # TODO: False positives
-    assert include_text_key('geographic location (altitude)') == True
-    assert include_text_key('geographic location (depth)') == True
-    assert include_text_key('geographic location (elevation)') == True
-    assert include_text_key('GI_Location') == True
-    assert include_text_key('Montreal CD Location Upper GI') == True
+    assert True == include_text_key('geographic location (altitude)')
+    assert True == include_text_key('geographic location (depth)')
+    assert True == include_text_key('geographic location (elevation)')
+    assert True == include_text_key('GI_Location')
+    assert True == include_text_key('Montreal CD Location Upper GI')
