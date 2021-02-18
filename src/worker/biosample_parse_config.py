@@ -50,6 +50,7 @@ null_text_values = [
     'not determined',
     'not provided',
     'not stated',
+    'restricted access',
     'unknown',
 ]
 
