@@ -39,6 +39,8 @@ null_text_values = [
     'null',
     'missing geographic information',
     'missing',
+    'lab culture', # "usa: lab culture with samples originating from freiburg, germany"
+    'lab strain',
     'n/a',
     'n.a.',
     'none',
@@ -54,6 +56,7 @@ null_text_values = [
 # these should be exact match (don't remove substring)
 exact_null_text_values = [
     'na',
+    'lab',
 ]
 
 # lat_lon_pattern = '^(-?\d+(\.\d+)?)\s*(\w)*\s*(-?\d+(\.\d+)?)\s*(\w)*$'
