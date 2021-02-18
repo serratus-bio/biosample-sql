@@ -7,6 +7,32 @@ potential_geo_coord_keywords = {'latitude', 'longitude', '_lat', '_lon', 'lat_',
 potential_geo_text_keywords = {'location', 'geogra', 'geoloc', 'geo_loc'}
 collection_date_attr = "collection_date"
 
+geo_coord_exclusion_keywords = {
+    'colon',
+    'latino',
+    'later',
+    'how_long',
+}
+
+geo_text_exclusion_keywords = {
+    'anatomical',
+    'aneurysm',
+    'barcode',
+    'biopsy',
+    'body',
+    'colon',
+    'disease',
+    'gi',
+    'plate',
+    'stake',
+    'tissue',
+    'tonotopic',
+    'transect',
+    'translocation',
+    'tumor',
+    'tumour',
+    'well',
+}
 
 # in order of removal
 null_text_values = [
