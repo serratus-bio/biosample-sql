@@ -1,0 +1,385 @@
+"sample storage, location"
+(country
+2nd_geo_loc
+adlt_chld_subfrg_country
+animal_location
+Bacteria_localization
+bait location
+Birth location accuracy
+birth_location
+birth_location_population
+cage_location
+Capturing location
+cat_location
+cd_location
+citys_geographical_zone
+collection location
+Collection location
+Collection locations
+collection_country
+collection_location
+Collection_Location
+country of birth
+Country of Birth
+Country of contamination
+country of infection
+country of isolation
+country of origin
+Country of origin
+Country of Origin
+COUNTRY OF ORIGIN
+Country of Origin - PMID:19597147
+Country of travel
+country residence
+country source
+country_code
+country_location
+country_nation
+country_of_birth
+country_of_infection
+country_of_origin
+country_of_origin_specifics
+country_origin
+country_residence
+country_target_subfragment
+country/location
+countryoforigin
+county
+County
+crispr/cas9 insertion location
+culture_location
+Culture_location
+cultured_location
+cutting_location
+derivation location
+detail_geographic_locality
+detailed_location
+Discovery_location
+dog_location
+doi_location
+donor geograhic location of residence
+donor geographic location of residence
+EFABIS Breed country
+environment location
+exact location
+exact seed sampling location
+exact_location
+exercise location
+exercise_location
+experiment_location1
+experiment_location2
+extraction_location
+facility_or_location
+family_out_of_country
+female_birth_location
+field_location
+field_location_id
+figure_location
+filter_location
+full_location
+galk location
+gaplocation
+garden_location
+Garden_location
+gcms_run_location
+Gene bank country
+general_location
+generalized_location
+geo_coor
+geo_lac_name
+geo_loc
+geo_loc_missingme
+geo_loc_name
+geo_loc_name_(samled_in_the_wild)
+geo_loc_name_continent
+geo_loc_name_coord
+geo_loc_name2
+geo_location
+geo_log_name
+GEO_sample
+geo_village
+geo: loc: name
+geographic
+geographic location (altitude)
+geographic location (altitude/elevation)
+Geographic location (altitude/elevation)
+Geographic location (area)
+geographic location (country 2)
+geographic location (country and-or sea)
+geographic location (country and/or atlantic ocean)
+geographic location (country and/or sea
+geographic location (depth)
+Geographic location (depth)
+geographic location (elevation)
+geographic location (locality area)
+geographic location (Pressure dbar)
+geographic location (province)
+geographic location country and/or sea
+Geographic Location Primer 1
+Geographic Location Primers 2
+geographic locations of isolates
+Geographic locations of isolates
+geographic origin of sample
+Geographic_ancestral_origins
+geographic_area
+Geographic_area
+geographic_feature
+geographic.location..country.and.or.sea.
+geographical area
+geographical biosample
+geographical distribution
+geographical location (depth)
+Geographical location (Depth)
+Geographical location (elevation)
+geographical origin
+geographical position
+geographical_origin
+geography
+geolocation name
+GeolocationName
+geological_location_name
+GI_Location
+gps location
+grid_location
+group allocation
+gut_location
+gut_Locations
+host_country_of_origin
+host_location
+host_location_sampled
+ICP_country_plot
+ID_location
+Injury type and sample location
+Investigation location
+Isolation location
+Isolation Location
+Isolation_country
+isolation_location
+jpl_location_area
+library_location
+library_preparation_location
+local_location_notes
+localization
+Localization
+localization description
+location
+Location
+LOCATION
+location code
+Location code
+Location Collected
+location description
+Location description
+location details
+location generated
+Location ID
+location in column
+location in epididymis
+location isolated
+Location name
+Location of Stn A01
+Location of Stn A03
+Location of Stn A05
+Location of Stn A07
+Location of Stn B03
+Location of Stn B05
+Location of Stn B07
+Location of Stn B1
+Location of Stn B5
+Location of Stn B9
+Location of Stn D1
+Location of Stn D3
+Location of Stn D5
+Location of Stn D9
+Location of Stn F01
+Location of Stn F03
+Location of Stn F06
+Location of Stn F08
+Location of Stn F10
+Location of Stn G6
+Location of Stn I
+Location of Stn P03
+Location of Stn P07
+Location of Stn P11
+location on panicle
+location Stn 14
+location Stn 16
+location Stn 18
+location Stn 20
+location Stn 22
+location Stn 24
+location Stn 27
+location Stn 31
+location Stn 34
+location Stn 36
+location Stn 38
+location Stn 39
+location Stn 4
+location Stn 40
+location Stn 41
+location Stn 8
+location Stn 9
+location Stn A1
+location Stn A2
+location Stn A3
+location Stn A4
+location Stn A5
+location Stn A6
+location Stn B1
+location Stn B2
+location Stn B3
+Location_abbrev
+Location_address
+Location_and_Rep
+location_code
+Location_Deployed
+location_desc
+location_details
+location_experiment
+location_in_lake
+location_in_microcosm
+location_name
+Location_of_common_garden_trial
+location_of_dna_extraction
+location_of_metastasis
+location_one_line
+location_plus_phase
+location_replicates
+location_sample_id
+location_sampled
+location_sampling
+location_stool_in_pbs
+location_text
+location_time_point_or_sediment_depth
+Location_Treatment
+location_type
+location/altitude
+LocationDesc
+LocationID
+locationRemarks
+locations
+longhurst_province
+machine location
+male_birth_location
+Map location
+Map_location
+Material for culture geographical location
+material_location
+matrilineal_origin_geo_loc_name
+md_sample_area_cm2
+metadata_PatLocation
+MHCOUNTRYBRTH
+Montreal CD Location
+Montreal CD Location Upper GI
+Montreal Location
+moved to current location (years ago):
+moved to current location at age:
+movetocurrentlocation
+Mu Location
+N_localizations
+name_location
+name/location
+needle location
+nick_location
+organ location
+Organization country
+origin_country
+original location of the cell
+parsf location
+patient_date_location
+patrilineal_origin_geo_loc_name
+physical location
+physical specimen location
+physical_location
+physical_location_1
+physical_location_2
+physical_sample_location
+physical_speciman_location
+physical_specimen_location
+physical_specimen_location_specific
+pipe_location
+plasmid_location
+plot_location
+pond location
+Population Sample Location
+pot_soil_species_environment_country
+Practice_Location
+province
+Province
+Province_Code
+Province/State
+publication country - PMID:20520727
+relative_location
+replocation
+resection location
+reservoir_location
+sample depth or location
+sample location
+Sample Location
+Sample Location Full Name
+Sample Location Name
+sample_area
+sample_location
+Sample_location
+Sample_Location
+SAMPLE_LOCATION
+sample_location_code
+sample_location_detail
+Sample_location_in_relation_to_plant_centre
+sample_title_MDcounty
+Sample-location
+Sampled Locations
+sampled_location
+samplelocation
+sampling location
+sampling_location
+SamplingLocation
+sd_location
+sd_sample_area
+SeasonYearLocation
+separation-location
+Sequencing_company_and_location
+sequencing_location
+shelf_location
+site_location
+site;veg_type;exp;location;plot_Id;unique_plotID;UMGC_sample.id;DNA_sample.id;unique_sampID;treatment;myc_assoc;incubated;sample_type;type;isolate;mel_status;incub_period.days
+Soil location
+soil_geo_loc_name
+source location
+Species_location
+specific_location
+specific_location_name
+Specimen Collection Location - Country
+Specimen Collection Location - Location
+specimen_location
+state_location
+State/Province
+stateProvince
+STK_localization
+stool_dna_location
+stool_in_pbs_location
+stream_location
+study_location
+sub_location
+sub-location
+subcellular localization
+Subcellular localization
+subcellular location
+subjective_ses_country
+Subway_location
+surface_location
+swab_location_code
+swablocation
+Time_Location
+toothbrush_storage_location
+transgene location
+travel_locations_list
+traveled_out_of_country
+umi base location
+Vineyard Location
+Vineyard Locations
+voucher location
+Voucher location
+Voucher Location
+wild_donor_collection_location
+ZymoShipLocation

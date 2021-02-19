@@ -35,7 +35,7 @@ geo_text_inclusion_keywords = {
     'sample_area',
 }
 geo_text_exclusion_keywords = {
-    'anatomical',
+    'anatomic',
     'aneurysm',
     'barcode',
     'biopsy',
