@@ -7,11 +7,12 @@ collection_date_attr = "collection_date"
 
 geo_coord_inclusion_keywords = {
     'latitude',
-    'longitude',
+    'longit',
     '_lat',
     '_lon',
     'lat_',
     'lon_',
+    'coordinates',
 }
 geo_coord_exclusion_keywords = {
     'colon',
@@ -21,12 +22,18 @@ geo_coord_exclusion_keywords = {
 }
 
 geo_text_inclusion_keywords = {
-    'location',
+    'country',
+    'county',
+    'geo_',
+    'geo:',
     'geogra',
     'geoloc',
-    'geo_loc',
+    'localization',
+    'location',
+    'region',
+    'province',
+    'sample_area',
 }
-
 geo_text_exclusion_keywords = {
     'anatomical',
     'aneurysm',
