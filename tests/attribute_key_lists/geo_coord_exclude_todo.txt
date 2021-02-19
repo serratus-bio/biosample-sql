@@ -1,0 +1,3 @@
+C_latipinnis_ancestry
+flat_feet_yes_no
+MiSeq_Run_LongID

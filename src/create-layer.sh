@@ -1,6 +1,6 @@
 virtualenv ve
 source ve/bin/activate
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 mkdir -p tmp/python
 cp -rp ve/lib/python3.7/site-packages/* tmp/python
 cp -rp ve/lib64/python3.7/site-packages/* tmp/python

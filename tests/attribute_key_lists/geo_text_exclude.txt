@@ -1,0 +1,63 @@
+anatomic location
+anatomical location
+Anatomical Location
+aneurysm location
+atrial tissue region
+barcode_location
+barcode_region
+biopsy location
+biopsy_location
+Body location
+Body Location
+body weight before allocation
+BodyLocation
+brain sub-region tissue
+cell barcode base location
+cell culture well location
+chromosomal translocation
+ChromosomalTranslocation
+Colon location
+disease_location
+DiseaseLocation
+fat tissue location
+forward_barcode_location
+gdna_plate_location
+Location in colon
+location in tissue
+location of within colony sampling
+Location on transect
+mll translocation
+na_plate_location
+other_plate_location
+Plate location (well #) required if samples will be provided in a plate.
+plate_location
+plate_location_combined
+platelocation
+Primary Tumour Location
+region of tissue
+region_monitoring_well
+reverse_barcode_location
+site.transect location(m)
+Stake Location
+t(4;14) translocation
+tissue location
+Tissue location
+Tissue Location
+tissue region
+tissue subregion
+tonotopic location
+transect_location
+TransectLocation
+translocation
+TRANSLOCATION IgH
+translocation t(4;14)
+tumor localization
+tumor location
+Tumor location
+tumor region
+tumor_location
+Tumor_Location
+Tumour_anatomical_location
+Ulcer_location
+well location
+well_location

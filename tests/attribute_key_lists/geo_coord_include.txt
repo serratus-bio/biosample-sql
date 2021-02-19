@@ -1,0 +1,140 @@
+Additional_lat_lon
+bait coordinates
+birth_lat_lon
+birth location latitude
+birth location longitude
+CH1903_LV03_Latitude_X
+CH1903_LV03_Longitude_Y
+C_latipinnis_ancestry
+collection_coordinates
+coordinates
+Coordinates
+decimallatitude
+decimal_latitude
+decimalLatitude
+decimallongitude
+decimal_longitude
+decimalLongitude
+Dec_lattitude
+Dec_longitude
+detailed_latitude_and_longitude
+estimated latitude of seawater source
+estimated longitude of seawater source
+geographic coordinates
+geographic_coordinates
+geographic location latitude
+geographic location (latitude)
+geographic location (latitude)*
+geographiclocation(latitude)
+Geographic location (latitude)
+Geographic location (Latitude)
+geographic location longitude
+geographic location (longitude)
+geographic location (longitude)*
+Geographic location (longitude)
+Geographic location (Longitude)
+gographic location (longitud)
+gps coordinates
+GPS Longitude W
+gr_maxlat_dd
+gr_midrangelat_dd
+gr_minlat_dd
+Group_long
+Isolation coordinates
+lat+af8_lon
+latCH_lonCH
+latitude
+Latitude
+LATITUDE
+latitude and logitude
+latitude_and_longitude_(2)
+latitude_and_longitude_(3)
+latitude and longtitude
+latitude.dd
+latitude_deg
+Latitude End
+latitude_longitude
+latitude [n]
+latitude_provided
+latitude (raw)
+Latitude (S)
+latitude start
+Latitude Start
+latitude_units
+lat_lan
+lat_lEn
+lat_lo
+lat_lon
+lat_lon_2
+lat_long
+lat_Long
+lat_long_correct
+lat_long_details
+lat_lon (N:W)
+library_preparation_location_latitude
+library_preparation_location_latitude_units
+library_preparation_location_longitude
+library_preparation_location_longitude_units
+location_coordinates
+longhurst_long
+longitdue
+Longittude
+longitude
+Longitude
+LONGITUDE
+longitude.dd
+longitude_deg
+longitude [e]
+Longitude End
+Longitude Lattitude Primer 1
+longitude_provided
+longitude (raw)
+longitude start
+Longitude Start
+longitude_unites
+longitude_units
+Longitude (W)
+Longitudinal Degrees
+Longitudinal Minutes
+longitudinal replicate
+Longitudinal Seconds
+longitudinal visit
+lon_lat
+matrilineal_origin_lat_lon
+MiSeq_Run_LongID
+mixed_lat_lon
+multiple_lat_lon
+other_gps_coordinates
+patrilineal_origin_coordinates
+plate_coordinates
+sample_name,organism,host,isolation_source,collection_date,geo_loc_name,lat_lon
+sample_name_,organism,isolation_source,collection_data_,geographic_location_,latitude,longitude
+sample_name,sample_title,bioproject_accession,organism,collection_date,env_biome,env_feature,env_material,geo_loc_name,host,lat_lon,,
+sample_name,sample_title,bioproject_accession,organism,host,isolation_source,collection_date,geo_loc_name,lat_lon
+sample_name,sample_title,bioproject_accession,organism,host,isolation_source,collection_date,geo_loc_name,lat_lon,ref_biomaterial,rel_to_oxygen,samp_collect_device,samp_mat_process,samp_size,source_material_id,description
+sample_name,sample_title,organism,collection_date,broad_scale_environmental_context,local_scale_environmental_context,environmental_medium,geographic_location,host,latitude_and_longitude,isolation_source
+sampling event, latitude, end
+sampling event, latitude, start
+sampling event, longitude, end
+sampling event, longitude, start
+sampling event, start, latitude
+sampling event, start, longitude
+sd_near_outfall_lat
+sd_near_outfall_long
+sequencing_location_latitude
+sequencing_location_latitude_units
+sequencing_location_longitude
+sequencing_location_longitude_units
+site coordinates
+soil_lat_lon_site_1
+soil_lat_lon_site_2
+source_longitude_latitude_elev(m)
+Specimen Collection Location - Latitude
+Specimen Collection Location - Longitude
+stored_latitude
+stored_longitude
+submitted_lat_lon
+surface_long
+tooth_sampled_long
+unique_sample_name_long
+without_treatment_long

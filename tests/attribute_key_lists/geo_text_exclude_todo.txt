@@ -1,0 +1,153 @@
+16S Variable Region
+16s_region
+16S_region
+16S_rRNA_gene_target_region
+16S_variable_region
+16SrDNA sequence region
+454 sequencing region
+Admin_Region
+affected genomic location
+amplicon_region
+amplified_dna_region
+amplified_region
+ap-region
+bait region
+Bioregion
+brain region
+CCZ_region
+cell region
+cell_region
+cell/region
+cellular region
+census region
+census_region
+chromosome regions
+cns subregion
+cnv length different regions mbp
+cnv num different regions
+cochlear region
+country_region
+CountryOrRegion
+crispr/cas9 insertion location
+data_type (fragment_VariableRegion)
+ddo_gene_region
+death - normothermic_regional_perfusion
+deleted region
+developmental_time_region
+dissected_region
+economic region
+economic_region
+Ecoregion Level IV
+embryo region
+embryonic region
+environmental system, marine region
+environmental_marine_region
+fallopian tube region
+fetal region
+Gene_hypervariable_regions
+gene_region
+genetic_region
+geo_region
+geographic location (country and/or sea	 region)
+geographic location (country and/or sea,region)
+geographic location (region and locality)
+geographic location (region and/or locality)
+geographic location region and locality
+geographic location region and/or locality)
+geographic_location_region_and_locality
+geographic.location..region.and.locality.
+geographical_region
+Geographical_region
+Geogrphic location (country and/or sea, region)
+global_region
+gutregion
+heart region
+HHS_region
+hippocampal subregion
+HSS_region
+Hydrocarbon Region
+hyp_16s_region
+if region stains
+intestinal region
+Intestinal Region
+intestinal_region
+Isolation_region
+kidney region
+marine region
+Marine Region
+mec region
+mg_region_mean_meso_biomass_g_per_zm_g
+mg_region_mean_shoot_epi_biomass_g
+mg_region_mean_shoot_length_cm
+mg_region_mean_zm_density_msq
+mg_region_mean_zm_density_plot
+mg_region_mean_zm_shoot_biomass_g
+mg_region_mean_zm_shoot_biomass_g_msq
+mg_region_sd_zm_shoot_biomass_g
+mg_region_se_meso_biomass_g_per_zm_g
+mg_region_se_shoot_epi_biomass_g
+mg_region_se_shoot_length_cm
+mg_region_se_zm_density_plot
+mg_region_se_zm_shoot_biomass_g_msq
+midgut region
+mouseid_brainregion
+No Regional Lymph Nodes Assessed
+ocean_superregion
+optimized region of luciferase
+PatientID-region
+ragiographic region
+reef_region
+region
+Region
+REGION
+Region (HHS)
+region description
+region isolated
+region of origin
+region of rpe
+region targeted
+region_amplified
+region_of_interest
+region_sampled
+region_targeted
+regional_lymph_nodes
+regionid
+regionofinterest
+regions analysed
+regions analyzed
+rrna_region
+sample_region
+Sample_Region
+SampleRegion
+sampling_location_region
+sampling_region
+scn subregion
+section/region
+seed region
+seq_region
+sequenced_region
+skin region
+soil region
+source region
+specific heart region
+spinal cord region
+stability of region
+state_or_region
+stem region
+Sub-region
+subcellular location
+subgenomic region
+subgenomic_region
+subregion
+Subregion
+target region
+target region length (bp)
+target region offset (bp)
+target_region
+target_sequencing_region
+toothbrush_storage_location
+trachea region
+transgene location
+variable region
+variable region length
+vine region

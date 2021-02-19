@@ -1,11 +1,14 @@
 from biosample_parse_config import (
     biosample_id_colname_map,
     biosample_attribute_keys,
-    potential_geo_coord_keywords,
-    potential_geo_text_keywords,
     collection_date_attr
 )
-from biosample_parse_functions import get_extracted_cols
+from biosample_parse_functions import (
+    get_extracted_cols,
+    clean_text,
+    include_coord_key,
+    include_text_key
+)
 
 class BioSample():
 
@@ -40,15 +43,16 @@ class BioSample():
 
     def get_raw_attrs(self):
         d = {
+            'attributes': self.attrs,
             'geo_coord_all': dict(),
             'geo_text_all': dict()
         }
         for k, v in self.attrs.items():
             if k == collection_date_attr:
-                d['collection_date'] = v
-            elif any(keyword in k.lower() for keyword in potential_geo_coord_keywords):
+                d['collection_date'] = clean_text(v)
+            elif include_coord_key(k):
                 d['geo_coord_all'][k] = v
-            elif any(keyword in k.lower() for keyword in potential_geo_text_keywords):
+            elif include_text_key(k):
                 d['geo_text_all'][k] = v
         return d
 
