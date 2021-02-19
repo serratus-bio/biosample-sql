@@ -43,6 +43,7 @@ class BioSample():
 
     def get_raw_attrs(self):
         d = {
+            'attributes': self.attrs,
             'geo_coord_all': dict(),
             'geo_text_all': dict()
         }
