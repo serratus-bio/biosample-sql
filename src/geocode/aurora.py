@@ -26,4 +26,5 @@ def upload(df):
     with engine.connect() as con:
         df.to_sql(geocode_table, con,
             if_exists='append',
+            index=False,
             chunksize=1000)
