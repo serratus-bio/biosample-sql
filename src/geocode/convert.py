@@ -5,7 +5,6 @@ def get_coords(text):
     if len(text) > 200:
         text = text[:200]
     if text.isdigit():
-        print(text)
         return (None, None)
     result = client.search_place_index_for_text(
             IndexName="ExamplePlaceIndex",
