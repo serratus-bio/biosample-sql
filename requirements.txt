@@ -2,3 +2,4 @@ lxml
 pandas
 sqlalchemy-aurora-data-api
 plotly
+pycountry
