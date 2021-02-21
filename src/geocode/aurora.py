@@ -11,12 +11,6 @@ geocode_table = 'biosample_geocode'
 engine = create_engine('postgresql+auroradataapi://:@/summary',
             connect_args=dict(aurora_cluster_arn=cluster_arn, secret_arn=secret_arn))
 
-dtype = {
-    'attributes': sqlalchemy.dialects.postgresql.JSONB,
-    'geo_coord_all': sqlalchemy.dialects.postgresql.JSONB,
-    'geo_text_all': sqlalchemy.dialects.postgresql.JSONB
-}
-
 def download(query):
     with engine.connect() as con:
         df = pd.read_sql(query, con)
