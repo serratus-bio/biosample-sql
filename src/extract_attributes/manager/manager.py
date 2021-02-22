@@ -9,7 +9,7 @@ MAX_ITEMS_PER_WORKER = 10000
 MINIMUN_REMAINING_TIME_MS = 10000
 
 def handler(event, context):
-    start_byte = event['start_byte']
+    start_byte = event.get('start_byte', 0)
     end = s3_object.content_length
     while start_byte < end:
         if context.get_remaining_time_in_millis() < MINIMUN_REMAINING_TIME_MS:
