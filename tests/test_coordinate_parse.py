@@ -35,3 +35,8 @@ def test_try_get_coords():
     assert ('84.270018', '20.237556') == try_get_coords({
         'geographic location (latitude)': '20.237556 N',
         'geographic location (longitude)': ' 84.270018 E'})
+
+    # TODO: parse degrees/minutes/seconds from octal
+    # assert ('', '') == try_get_coords({
+    #     'lat_lon': '29\xc2\xb005\xe2\x80\x9901\xe2\x80\x9d N'
+    # })
