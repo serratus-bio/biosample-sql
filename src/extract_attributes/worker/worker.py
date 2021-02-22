@@ -30,6 +30,7 @@ def get_df_from_items(items):
         if element.tag == 'BioSample':
             biosample = BioSample(elements)
             dicts.append(biosample.get_columns())
+            # TODO: skip null biosample_id
             elements = []
         elements.append(element)
     df = pd.DataFrame(dicts)
