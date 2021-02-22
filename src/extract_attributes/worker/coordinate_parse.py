@@ -13,9 +13,9 @@ def try_get_coords(geo_coord_dict):
     # TODO: get unit keys
     lat_key, lon_key = '', ''
     for key in geo_coord_dict:
-        if 'lat' in key:
+        if 'lat' in key.lower():
             lat_key = key
-        elif 'lon' in key:
+        elif 'lon' in key.lower():
             lon_key = key
 
     if lat_key and lon_key:
