@@ -10,6 +10,7 @@ def try_get_coords(geo_coord_dict):
     if 'lat_lon' in geo_coord_dict:
         return get_lat_lon(geo_coord_dict['lat_lon'])
 
+    # TODO: get unit keys
     lat_key, lon_key = '', ''
     for key in geo_coord_dict:
         if 'lat' in key:
@@ -26,7 +27,7 @@ def try_get_coords(geo_coord_dict):
 def get_lat_lon(text):
     if not has_digit(text):
         return (None, None)
-    lat_lon_pattern = r'(-?[\d\.]+)\s*(\w)*\s*(-?[\d\.]+)\s*(\w)*$'
+    lat_lon_pattern = r'(-?[\d\.]+)\s*([NS])*\s*(-?[\d\.]+)\s*([EW])*$'
     result = re.search(lat_lon_pattern, text)
     if not result:
         return (None, None)

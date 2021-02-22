@@ -21,5 +21,14 @@ def test_try_get_coords():
         'latitude': '20.237556 N',
         'longitude': ' 84.270018 E'})
     assert ('84.270018', '20.237556') == try_get_coords({
+        'latitude': '20.237556',
+        'longitude': ' 84.270018'})
+    assert ('84.270018', '-20.237556') == try_get_coords({
+        'latitude': '-20.237556',
+        'longitude': '84.270018'})
+    assert ('-84.270018', '-20.237556') == try_get_coords({
+        'latitude': '-20.237556',
+        'longitude': '-84.270018'})
+    assert ('84.270018', '20.237556') == try_get_coords({
         'geographic location (latitude)': '20.237556 N',
         'geographic location (longitude)': ' 84.270018 E'})
