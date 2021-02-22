@@ -10,6 +10,7 @@ table_name = 'biosample3'
 engine = create_engine('postgresql+auroradataapi://:@/summary',
             connect_args=dict(aurora_cluster_arn=cluster_arn, secret_arn=secret_arn))
 
+chunksize = 5000
 dtype = {
     'attributes': sqlalchemy.dialects.postgresql.JSONB,
     'geo_coord_all': sqlalchemy.dialects.postgresql.JSONB,
@@ -21,4 +22,5 @@ def upload(df):
         df.to_sql(table_name, con,
             if_exists='append',
             index=False,
+            chunksize=chunksize,
             dtype=dtype)
