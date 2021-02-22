@@ -12,7 +12,7 @@ engine = create_engine('postgresql+auroradataapi://:@/summary',
 
 chunksize = 5000
 dtype = {
-    'attributes': sqlalchemy.dialects.postgresql.JSONB,
+    # 'attributes': sqlalchemy.dialects.postgresql.JSONB,
     'geo_coord_all': sqlalchemy.dialects.postgresql.JSONB,
     'geo_text_all': sqlalchemy.dialects.postgresql.JSONB
 }
