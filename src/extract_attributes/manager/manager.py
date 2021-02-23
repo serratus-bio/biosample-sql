@@ -36,18 +36,25 @@ def prepare_worker(start_byte):
         start_byte += len(next(lines)) + 1 # skip <BioSampleSet>
 
     count = 0
-    n_bytes = 0
+    worker_bytes = 0
+    biosample_bytes = 0
     for line in lines:
-        if n_bytes == 0 and not line.startswith(b'<BioSample'):
-            raise Exception('parse error')
-        n_bytes += len(line) + 1
+        # check first line
+        if count == 0 and biosample_bytes == 0 and not line.startswith(b'<BioSample'):
+            if line.startswith(b'</BioSampleSet>'):
+                print('Exiting - reached the end of BioSampleSet.')
+                raise SystemExit
+            raise Exception(f'parse error: {line} does not start with "<BioSample"')
+        biosample_bytes += len(line) + 1
         if line.startswith(b'</BioSample>'):
+            worker_bytes += biosample_bytes
+            biosample_bytes = 0
             count += 1
         if count == MAX_ITEMS_PER_WORKER:
             break
 
-    end_byte = start_byte + n_bytes
-    print(start_byte, end_byte)
+    end_byte = start_byte + worker_bytes
+    print(f'Invoking worker with start,end=({start_byte},{end_byte})')
     invoke_worker(start_byte, end_byte)
     return end_byte
 
