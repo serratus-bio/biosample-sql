@@ -42,4 +42,7 @@ def get_lat_lon(text):
         y_num = f'-{y_num}'
     if x_dir == 'W' and x_num[0] != '-':
         x_num = f'-{x_num}'
-    return float(x_num), float(y_num)
+    try:
+        return float(x_num), float(y_num)
+    except ValueError:
+        return (None, None)
