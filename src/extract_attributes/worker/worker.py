@@ -29,9 +29,12 @@ def get_df_from_items(items):
     for _, element in items:
         if element.tag == 'BioSample':
             biosample = BioSample(elements)
-            dicts.append(biosample.get_columns())
-            # TODO: skip null biosample_id
             elements = []
+            biosample_columns = biosample.get_columns()
+            if 'biosample_id' not in biosample_columns:
+                print(f'empty BioSample entry: {biosample}')
+                continue
+            dicts.append(biosample_columns)
         elements.append(element)
     df = pd.DataFrame(dicts)
     return df

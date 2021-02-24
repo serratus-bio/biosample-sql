@@ -57,4 +57,4 @@ class BioSample():
         return d
 
     def __repr__(self):
-        return f'BioSample({self.ids})'
+        return f'BioSample(ids={self.ids}, attrs={self.attrs})'
