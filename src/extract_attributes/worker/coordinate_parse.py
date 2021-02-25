@@ -38,11 +38,17 @@ def get_lat_lon(text):
     if not result:
         return (None, None)
     y_num, y_dir, x_num, x_dir = result.groups()
+
     if y_dir == 'S' and y_num[0] != '-':
         y_num = f'-{y_num}'
     if x_dir == 'W' and x_num[0] != '-':
         x_num = f'-{x_num}'
+
     try:
-        return float(x_num), float(y_num)
+        x_num, y_num = float(x_num), float(y_num)
     except ValueError:
         return (None, None)
+
+    if (-180 <= x_num <= 180) and (-90 <= y_num <= 90):
+        return (x_num, y_num)
+    return (None, None)
