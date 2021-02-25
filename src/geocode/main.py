@@ -1,7 +1,7 @@
 from aurora import download, upload
 from convert import get_coords
 
-table_name = 'biosample5'
+table_name = 'biosample2'
 query = f'''
     select distinct geo_text_extracted
     from {table_name}
